@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The legend of King Hemesh." />
+    <title>King Hemesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="entry" aria-labelledby="title">
+        <header>
+          <p class="eyebrow">royal lexicon <span aria-hidden="true">·</span> est. ancient</p>
+          <h1 id="title">king hemesh</h1>
+          <p class="pronunciation">/kɪŋ ˈhɛmɪʃ/ <button class="speaker" type="button" aria-label="Hear pronunciation">🔊</button></p>
+        </header>
+
+        <div class="definition">
+          <p class="part-of-speech">noun</p>
+
+          <article>
+            <h2><span>1.</span> figurative</h2>
+            <p>The undisputed ruler of all dynasties, seven kingdoms, and everything in between.</p>
+            <p>A legendary king. An unbeatable warrior. A menace to his enemies and a problem for his enemies’ enemies.</p>
+            <blockquote>“One does not simply challenge King Hemesh.”</blockquote>
+          </article>
+
+          <article>
+            <h2><span>2.</span> mythology</h2>
+            <p>Born to rule. Destined to conquer.</p>
+          </article>
+
+          <footer>
+            <p>origin</p>
+            <p>Ancient. Possibly mythical.</p>
+          </footer>
+        </div>
+
+        <figure>
+          <img src="assets/king-hemesh.png" alt="King Hemesh standing with a sword before his court in a grand stone hall." />
+          <figcaption>the king holds court</figcaption>
+        </figure>
+      </section>
+    </main>
+    <script>
+      document.querySelector('.speaker').addEventListener('click', () => {
+        const utterance = new SpeechSynthesisUtterance('King Hemesh');
+        utterance.rate = 0.8;
+        speechSynthesis.speak(utterance);
+      });
+    </script>
+  </body>
+</html>
