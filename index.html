@@ -1,15 +1,492 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Construction in Progress</title>
+    <title>hemesh gupta — i ship software</title>
+    <meta
+      name="description"
+      content="software engineer in bengaluru. mac apps, chrome extensions, compilers, backends. sde ii at salesforce. nights go to side projects."
+    />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/favicon.png" />
+    <script>
+      tailwind = window.tailwind || {};
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Instrument Sans"', "sans-serif"],
+              serif: ['"Instrument Serif"', "serif"],
+              mono: ['"JetBrains Mono"', "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <h1>🚧 Construction in Progress</h1>
-      <p>This site is under construction. Please check back later.</p>
-    </main>
+    <div class="min-h-screen bg-neutral-950 text-white selection:bg-yellow-300 selection:text-black overflow-x-hidden">
+      <div class="max-w-[640px] mx-auto px-5 sm:px-6">
+        <section class="pt-10 sm:pt-14 pb-10">
+          <div class="space-y-7">
+            <div
+              class="rise flex items-center justify-between font-mono text-[11px] tracking-widest text-neutral-500 uppercase"
+              style="animation-delay: 0.05s"
+            >
+              <span>hemesh.wtf</span>
+              <a
+                href="https://x.com/hemeshgpt"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-white transition-colors normal-case"
+                >@hemeshgpt ↗</a
+              >
+            </div>
+
+            <div class="rise pt-6" style="animation-delay: 0.12s">
+              <img
+                src="/assets/hemesh.jpg"
+                alt="hemesh gupta"
+                class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border border-neutral-800 object-cover transition-transform duration-300 hover:scale-105 hover:-rotate-3 select-none"
+                draggable="false"
+              />
+            </div>
+
+            <h1
+              class="rise group-hero font-serif text-5xl sm:text-6xl leading-[1.05] text-white"
+              style="animation-delay: 0.18s"
+            >
+              sup, i'm
+              <span class="whitespace-nowrap"
+                >hemesh <span class="wave-hand cursor-default select-none">👋</span></span
+              >
+            </h1>
+
+            <div
+              class="rise space-y-4 text-neutral-300 text-base sm:text-lg leading-relaxed"
+              style="animation-delay: 0.24s"
+            >
+              <p>i write software. like, <em class="font-serif text-white">a lot</em> of software.</p>
+              <p>
+                been shipping for
+                <span id="years" class="font-mono text-[0.9em] text-green-400 tabular-nums"></span>
+                years. days at salesforce. nights on my own stuff.
+              </p>
+              <p>
+                mac apps, chrome extensions, compilers, backends. 10+ things that actually run. zero plans to stop.
+              </p>
+              <p class="text-neutral-400">
+                sde ii on tableau licensing. bits pilani cse. i build in public and talk about it on
+                <a
+                  href="https://x.com/hemeshgpt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white underline decoration-neutral-600 underline-offset-4 hover:decoration-yellow-300 transition-colors"
+                  >X</a
+                >.
+              </p>
+            </div>
+
+            <div class="rise flex items-center gap-2.5 font-mono text-xs text-neutral-400" style="animation-delay: 0.3s">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+              </span>
+              <span class="relative h-4 overflow-hidden">
+                <span id="status" class="inline-block text-neutral-200 status-swap">shipping mac apps</span>
+              </span>
+            </div>
+
+            <div
+              class="rise font-mono text-[11px] tracking-wide text-neutral-500 border-y border-neutral-900 py-3 flex flex-wrap gap-x-3 gap-y-1"
+              style="animation-delay: 0.36s"
+            >
+              <span class="text-neutral-300">47 public repos</span>
+              <span>·</span>
+              <span class="text-neutral-300">sde ii @ salesforce</span>
+              <span>·</span>
+              <span class="text-neutral-300">chai count: lost track</span>
+              <span class="ml-auto hidden sm:inline">bengaluru, india</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="work" class="py-12">
+          <div class="mb-2">
+            <p class="font-mono text-[11px] tracking-[0.25em] text-neutral-500 uppercase mb-3">stuff i've built</p>
+            <h3 class="font-serif text-3xl sm:text-4xl text-white">
+              i ship things. <em class="text-neutral-400">these things.</em>
+            </h3>
+            <p class="text-neutral-400 text-sm mt-3">
+              all real, all on github, all built by me. some might even make your life easier.
+            </p>
+          </div>
+          <div id="projects" class="space-y-8 mt-10"></div>
+        </section>
+
+        <section id="work-with-me" class="py-12">
+          <p class="font-mono text-[11px] tracking-[0.25em] text-neutral-500 uppercase pb-3 border-b border-neutral-800">
+            work with me
+          </p>
+          <div>
+            <a
+              href="https://x.com/hemeshgpt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group grid grid-cols-[auto_1fr_auto] items-center gap-x-4 sm:gap-x-5 gap-y-1.5 py-6 border-b border-neutral-900 hover:border-neutral-800 transition-colors"
+            >
+              <span class="text-neutral-400 group-hover:text-yellow-300 transition-colors">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M18.244 2H21.5l-7.5 8.57L22.5 22h-6.59l-5.16-6.74L4.8 22H1.54l8.02-9.16L1.5 2h6.75l4.66 6.18L18.244 2zm-1.16 18h1.8L7.01 3.91H5.08L17.084 20z"
+                  />
+                </svg>
+              </span>
+              <h4 class="font-serif text-2xl sm:text-[26px] text-white leading-tight group-hover:translate-x-1 transition-transform duration-300">
+                dm on X
+              </h4>
+              <span class="font-mono text-xs text-neutral-500 group-hover:text-white transition-colors whitespace-nowrap"
+                >@hemeshgpt ↗</span
+              >
+              <p class="col-start-2 col-span-2 text-sm text-neutral-500">
+                fastest way in. builders, systems, side projects, whatever's stuck.
+              </p>
+            </a>
+            <a
+              href="mailto:hgpt185@gmail.com?subject=hey%20hemesh"
+              class="group grid grid-cols-[auto_1fr_auto] items-center gap-x-4 sm:gap-x-5 gap-y-1.5 py-6 border-b border-neutral-900 hover:border-neutral-800 transition-colors"
+            >
+              <span class="text-neutral-400 group-hover:text-yellow-300 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4.5 6h15A1.5 1.5 0 0121 7.5v9A1.5 1.5 0 0119.5 18h-15A1.5 1.5 0 013 16.5v-9A1.5 1.5 0 014.5 6z" />
+                </svg>
+              </span>
+              <h4 class="font-serif text-2xl sm:text-[26px] text-white leading-tight group-hover:translate-x-1 transition-transform duration-300">
+                email
+              </h4>
+              <span class="font-mono text-xs text-neutral-500 group-hover:text-white transition-colors whitespace-nowrap"
+                >hgpt185@gmail.com ↗</span
+              >
+              <p class="col-start-2 col-span-2 text-sm text-neutral-500">
+                second fastest. send the problem, not the slide deck.
+              </p>
+            </a>
+            <a
+              href="https://github.com/hgpt185"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group grid grid-cols-[auto_1fr_auto] items-center gap-x-4 sm:gap-x-5 gap-y-1.5 py-6 border-b border-neutral-900 hover:border-neutral-800 transition-colors"
+            >
+              <span class="text-neutral-400 group-hover:text-yellow-300 transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+              <h4 class="font-serif text-2xl sm:text-[26px] text-white leading-tight group-hover:translate-x-1 transition-transform duration-300">
+                github
+              </h4>
+              <span class="font-mono text-xs text-neutral-500 group-hover:text-white transition-colors whitespace-nowrap"
+                >hgpt185 ↗</span
+              >
+              <p class="col-start-2 col-span-2 text-sm text-neutral-500">
+                the code is there. star it, fork it, roast it.
+              </p>
+            </a>
+            <p class="font-mono text-[11px] text-neutral-600 mt-4">
+              replies fastest: dm on X. second fastest: email. third: telepathy (beta).
+            </p>
+          </div>
+        </section>
+
+        <section class="py-12 overflow-hidden">
+          <p class="font-mono text-[11px] tracking-[0.25em] text-neutral-500 uppercase mb-3">elsewhere</p>
+          <h3 class="font-serif text-3xl sm:text-4xl text-white mb-3">a few receipts</h3>
+          <p class="text-neutral-400 text-sm mb-8">
+            bits pilani cse. internships at samsung, salesforce, porter. now tableau licensing at salesforce.
+          </p>
+          <div class="relative -mx-5 sm:-mx-6">
+            <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-neutral-950 to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-neutral-950 to-transparent z-10 pointer-events-none"></div>
+            <div id="receipts" class="flex gap-4 w-max marquee-track"></div>
+          </div>
+        </section>
+
+        <footer class="pt-12 pb-14">
+          <div class="mb-10">
+            <h3 class="font-serif text-3xl sm:text-4xl text-white leading-tight">
+              wanna build something?
+              <a
+                href="mailto:hgpt185@gmail.com"
+                class="text-neutral-400 hover:text-yellow-300 transition-colors underline decoration-neutral-700 underline-offset-8 hover:decoration-yellow-300"
+                >say hi</a
+              >
+            </h3>
+            <p class="text-neutral-500 text-sm mt-4">
+              p.s. the fastest way to reach me is a dm on
+              <a
+                href="https://x.com/hemeshgpt"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-neutral-300 underline decoration-neutral-700 underline-offset-4 hover:decoration-yellow-300 transition-colors"
+                >X</a
+              >. i'm on there more than i'd like to admit.
+            </p>
+          </div>
+          <div class="flex gap-3 mb-10" id="socials"></div>
+          <div class="font-mono text-[11px] text-neutral-600 flex flex-wrap justify-between gap-2 border-t border-neutral-900 pt-5">
+            <span>© <span id="year"></span> hemesh gupta</span>
+            <span>made with too much chai in bengaluru, india</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      const SHIP_START = new Date("2020-12-10T08:28:16+05:30").getTime();
+      const YEAR_MS = 365.2425 * 24 * 60 * 60 * 1000;
+      const statuses = [
+        "shipping mac apps",
+        "yapping on X",
+        "building in public",
+        "drinking way too much chai",
+        "fixing a bug i shipped yesterday",
+        "starting yet another side project",
+      ];
+
+      const groups = [
+        {
+          label: "mac apps",
+          products: [
+            {
+              name: "MacEx",
+              blurb: "native macos file manager. swift, swiftui, appkit. finder but it is mine.",
+              url: "https://github.com/hgpt185/MacEx",
+              logo: "/assets/macex.jpg",
+              tag: "swift",
+            },
+            {
+              name: "Work Timer",
+              blurb: "menu bar session timer with rest prompts. click the hourglass, get back to work.",
+              url: "https://github.com/hgpt185/worktimer",
+              logo: "/assets/worktimer.jpg",
+              tag: "python",
+            },
+          ],
+        },
+        {
+          label: "chrome extensions",
+          products: [
+            {
+              name: "Kyte",
+              blurb: "block domains or exact paths, timed focus sessions, lock mode so you cannot cheat.",
+              url: "https://github.com/hgpt185/kyte_chrome_extension",
+              logo: "/assets/kyte-logo.png",
+              tag: "js",
+            },
+            {
+              name: "YT Music lyrics",
+              blurb: "spotify-style animated synced lyrics on youtube music. click a line, seek the song.",
+              url: "https://github.com/hgpt185/yt-music-animated-lyrics",
+              logo: "/assets/ytlyrics.jpg",
+              tag: "js",
+            },
+          ],
+        },
+        {
+          label: "web apps",
+          products: [
+            {
+              name: "AsciiImage",
+              blurb: "turn any photo into ascii art. cli plus a django api. your face, 1980s terminal.",
+              url: "https://github.com/hgpt185/AsciiImage",
+              logo: "/assets/ascii-icon.jpg",
+              tag: "python",
+            },
+            {
+              name: "collab editor",
+              blurb: "google docs clone. socket.io plus operational transforms. concurrent edits, no crying.",
+              url: "https://github.com/hgpt185/google-docs-clone",
+              logo: "/assets/docs-clone.jpg",
+              tag: "ts",
+            },
+            {
+              name: "Life Goals",
+              blurb: "full-stack goal tracker. next.js, spring boot, jwt, postgres. dark mode because obviously.",
+              url: "https://github.com/hgpt185/life-goals-app",
+              logo: "/assets/lifegoals.jpg",
+              tag: "ts / java",
+            },
+          ],
+        },
+        {
+          label: "backends",
+          products: [
+            {
+              name: "chotu",
+              blurb: "url shortener in spring boot. rest api, redirect tracking, enterprise annotations for fun.",
+              url: "https://github.com/hgpt185/chotu",
+              logo: "/assets/chotu.jpg",
+              tag: "java",
+            },
+            {
+              name: "ecom api",
+              blurb: "product catalog and cart. crud, image uploads, search. in-memory db forgets on restart.",
+              url: "https://github.com/hgpt185/spring-boot-ecom-proj",
+              logo: "/assets/ecom.jpg",
+              tag: "java",
+            },
+            {
+              name: "Packet Sniffer",
+              blurb: "java tool for live traffic, port scanning, and staring at packets until they make sense.",
+              url: "https://github.com/hgpt185/Packet-Sniffer",
+              logo: "/assets/sniffer.jpg",
+              tag: "java",
+            },
+          ],
+        },
+        {
+          label: "systems",
+          products: [
+            {
+              name: "ERPLAG compiler",
+              blurb: "lexer, parser, semantic analyzer, codegen. written in c from scratch. pointer arithmetic and pain.",
+              url: "https://github.com/hgpt185/ERPLANG-Compiler",
+              logo: "/assets/erplag.jpg",
+              tag: "c",
+            },
+            {
+              name: "rate limiter",
+              blurb: "low-level rate limiter in java. the kind of thing you write to stop pretending you know it.",
+              url: "https://github.com/hgpt185/rate-limiter-design",
+              logo: "/assets/ratelimit.jpg",
+              tag: "java",
+            },
+          ],
+        },
+      ];
+
+      const receipts = [
+        { text: "sde ii on tableau licensing. activation, leases, freemium. multi-region dynamodb and the sagas that keep it honest.", project: "salesforce · 2024–now" },
+        { text: "user lifecycle apis, step functions bulk ops, license consumption tracking across tableau cloud manager.", project: "tableau cloud manager" },
+        { text: "cashback, referrals, transactional flows that hit production traffic. ktor, dagger, zero p0s.", project: "porter intern · 2024" },
+        { text: "config drift pipeline for tableau pods. gitlab plus s3, golden baseline, gus defects, slack alerts.", project: "salesforce intern · 2023" },
+        { text: "selenium + pytest regression suite. hours of manual qa gone. team got to ship instead of re-click.", project: "samsung intern · 2022" },
+        { text: "b.e. computer science, pilani campus. 8.5 / 10. leftover brain cells went to side projects.", project: "bits pilani · 2020–2024" },
+      ];
+
+      function productRow(p) {
+        return `
+          <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 py-4 border-b border-neutral-900 hover:border-neutral-800 transition-colors">
+            <div class="w-11 h-11 rounded-xl overflow-hidden flex-shrink-0 border border-neutral-800 bg-neutral-900 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">
+              <img src="${p.logo}" alt="" class="w-full h-full object-cover" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center gap-2">
+                <h4 class="font-semibold text-white text-[15px]">${p.name}</h4>
+                <svg class="arrow-out w-3.5 h-3.5 text-neutral-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8 7h9v9"/></svg>
+              </div>
+              <p class="text-sm text-neutral-400 leading-snug mt-0.5">${p.blurb}</p>
+            </div>
+            <span class="font-mono text-[11px] flex-shrink-0 px-2 py-1 rounded-md border text-neutral-400 border-neutral-800 group-hover:text-white group-hover:border-neutral-700">${p.tag}</span>
+          </a>
+        `;
+      }
+
+      const projectsEl = document.getElementById("projects");
+      projectsEl.innerHTML =
+        groups
+          .map(
+            (g) => `
+          <div>
+            <p class="font-mono text-[11px] tracking-[0.2em] text-neutral-600 uppercase pb-2 border-b border-neutral-900">${g.label}</p>
+            <div>${g.products.map(productRow).join("")}</div>
+          </div>`
+          )
+          .join("") +
+        `
+        <div class="flex items-center gap-4 py-1 opacity-60">
+          <div class="w-11 h-11 rounded-xl border border-dashed border-neutral-800 flex-shrink-0 flex items-center justify-center">
+            <svg class="w-4 h-4 text-neutral-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+          </div>
+          <div class="min-w-0 flex-1">
+            <h4 class="font-semibold text-neutral-400 text-[15px]">whatever's next</h4>
+            <p class="text-sm text-neutral-600 leading-snug mt-0.5">there's always something cooking.</p>
+          </div>
+          <span class="font-mono text-[11px] text-neutral-600 flex-shrink-0">no link yet</span>
+        </div>`;
+
+      const card = (r) => `
+        <div class="w-[320px] p-5 bg-neutral-900/60 border border-neutral-800/80 rounded-2xl flex-shrink-0">
+          <p class="text-neutral-300 text-sm mb-3 leading-relaxed">${r.text}</p>
+          <p class="font-mono text-[11px] text-neutral-500">${r.project}</p>
+        </div>`;
+      document.getElementById("receipts").innerHTML = [...receipts, ...receipts].map(card).join("");
+
+      const socials = [
+        { href: "https://x.com/hemeshgpt", label: "X", svg: '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21.5l-7.5 8.57L22.5 22h-6.59l-5.16-6.74L4.8 22H1.54l8.02-9.16L1.5 2h6.75l4.66 6.18L18.244 2zm-1.16 18h1.8L7.01 3.91H5.08L17.084 20z"/></svg>' },
+        { href: "https://github.com/hgpt185", label: "GitHub", svg: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>' },
+        { href: "https://www.linkedin.com/in/hemeshgupta", label: "LinkedIn", svg: '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.27V1.73C24 .77 23.21 0 22.23 0z"/></svg>' },
+        { href: "mailto:hgpt185@gmail.com", label: "Email", svg: '<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M4.5 6h15A1.5 1.5 0 0121 7.5v9A1.5 1.5 0 0119.5 18h-15A1.5 1.5 0 013 16.5v-9A1.5 1.5 0 014.5 6z"/></svg>' },
+      ];
+
+      document.getElementById("socials").innerHTML = socials
+        .map(
+          (s) => `
+        <a href="${s.href}" target="_blank" rel="noopener noreferrer" class="group relative flex items-center justify-center w-10 h-10 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white transition-colors magnetic">
+          ${s.svg}
+          <span class="absolute -top-9 scale-0 group-hover:scale-100 transition-transform bg-white text-black font-mono text-[10px] px-2 py-1 rounded whitespace-nowrap">${s.label}</span>
+        </a>`
+        )
+        .join("");
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const yearsEl = document.getElementById("years");
+      const tickYears = () => {
+        yearsEl.textContent = ((Date.now() - SHIP_START) / YEAR_MS).toFixed(9);
+      };
+      tickYears();
+      setInterval(tickYears, 50);
+
+      let statusI = 0;
+      const statusEl = document.getElementById("status");
+      setInterval(() => {
+        statusI = (statusI + 1) % statuses.length;
+        statusEl.style.opacity = "0";
+        statusEl.style.transform = "translateY(6px)";
+        setTimeout(() => {
+          statusEl.textContent = statuses[statusI];
+          statusEl.style.opacity = "1";
+          statusEl.style.transform = "translateY(0)";
+        }, 180);
+      }, 2600);
+
+      document.querySelectorAll(".magnetic").forEach((el) => {
+        el.addEventListener("mousemove", (e) => {
+          const r = el.getBoundingClientRect();
+          const x = (e.clientX - (r.left + r.width / 2)) * 0.2;
+          const y = (e.clientY - (r.top + r.height / 2)) * 0.2;
+          el.style.transform = `translate(${x}px, ${y}px)`;
+        });
+        el.addEventListener("mouseleave", () => {
+          el.style.transform = "translate(0, 0)";
+        });
+      });
+    </script>
   </body>
 </html>
